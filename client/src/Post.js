@@ -1,4 +1,4 @@
-export default function () {
+export default function Post({ title, summary, cover, content, createdAt }) {
   return (
     <div className="post">
       <div className="image">
@@ -8,21 +8,12 @@ export default function () {
         />
       </div>
       <div className="texts">
-        <h2>
-          A paragraph is a series of sentences that are organized and coherent,
-          and are all related to a single topic. Almost every piece of writing
-          you do that is longer than a few sentences should be organized into
-          paragraphs.\
-        </h2>
+        <h2>{title}</h2>
         <p className="info">
           <a className="author">Anchit Gedekar</a>
-          <time>05-02-24</time>
+          <time>{createdAt}</time>
         </p>
-        <p className="summary">
-          Paragraphs can contain many different kinds of information. A
-          paragraph could contain a series of brief examples or a single long
-          illustration of a general point.
-        </p>
+        <p className="summary">{summary}</p>
       </div>
     </div>
   );
