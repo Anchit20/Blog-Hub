@@ -14,12 +14,18 @@ export default function Header() {
     });
   }, []);
 
-  function logout() {
-    fetch("http://localhost:4000/logout", {
-      credentials: "include",
-      method: "POST",
-    });
-    setUserInfo(null);
+  async function logout() {
+    try {
+      await fetch("http://localhost:4000/logout", {
+        credentials: "include",
+        method: "POST",
+      });
+      setUserInfo(null);
+      localStorage.clear();
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const username = userInfo?.username;
@@ -32,6 +38,7 @@ export default function Header() {
       <nav>
         {username && (
           <>
+            <span>Hello, {username}</span>
             <Link to="/create">Create new post</Link>
             <a onClick={logout}>logout</a>
           </>

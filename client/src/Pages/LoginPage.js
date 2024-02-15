@@ -15,9 +15,11 @@ export default function LoginPage() {
       headers: { "Content-Type": "application/JSON" },
       credentials: "include",
     });
+
     if (response.ok) {
       response.json().then((userInfo) => {
         setUserInfo(userInfo);
+        localStorage.setItem("userId", userInfo.id);
         setRedirect(true);
       });
     } else {

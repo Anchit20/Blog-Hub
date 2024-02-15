@@ -1,8 +1,10 @@
 import { useState } from "react";
-
+import { Navigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
   async function register(e) {
     e.preventDefault();
     const response = await fetch("http://localhost:4000/register", {
@@ -12,10 +14,14 @@ export default function RegisterPage() {
     });
 
     if (response.status === 200) {
-      alert("Registration successfull");
+      setRedirect(true);
+      toast.success("Registraion Successfull");
     } else {
-      alert("Registration failed");
+      alert("Registration Failed");
     }
+  }
+  if (redirect) {
+    return <Navigate to={"/"} />;
   }
 
   return (
