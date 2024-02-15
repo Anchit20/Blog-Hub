@@ -15,7 +15,7 @@ export default function RegisterPage() {
 
     if (response.status === 200) {
       setRedirect(true);
-      toast.success("Registraion Successfull");
+      toast.success("Registraion successfull");
     } else {
       alert("Registration Failed");
     }
