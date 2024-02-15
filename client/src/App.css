@@ -4,8 +4,16 @@
 a{
   cursor: pointer;
 }
-body{
+/* body{
   color: #222;
+  background-color: #FFF6E9;
+} */
+body {
+  color: #333; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  /* background: linear-gradient(135deg, #f8f9fa, #d0d9e2);  */
+  background-color: #EEEDEB;
 }
 img{
   max-width: 100%;
@@ -21,6 +29,7 @@ header{
   margin-top: 20px;
   margin-bottom: 50px;
   align-items: center;
+  /* background-color: red; */
 }
 header a{
   text-decoration:none;
@@ -108,6 +117,9 @@ div.post-page div.image img{
   object-position: center center;
   width: 100%;
 }
+.image{
+  border-radius: 12px;
+}
 div.post-page a{
   color:#333;
   text-decoration: underline;
@@ -158,3 +170,40 @@ a svg{
 .Toastify__toast-body {
   white-space: nowrap;
 }
+
+
+.logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue color */
+  text-decoration: none;
+  padding: 10px 20px; /* Add some padding to the logo */
+  border-radius: 5px; /* Add a slight border radius */
+  background-color: #ecf0f1; /* Light gray background */
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+
+nav a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #2c3e50; 
+  text-decoration: none;
+  margin-right: 10px; 
+}
+
+nav a:hover {
+  color: #3498db; 
+}
+
+nav span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #2c3e50; 
+  margin-right: 10px;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */

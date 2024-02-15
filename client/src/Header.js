@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        My Blog
+        Quill
       </Link>
       <nav>
         {username && (
