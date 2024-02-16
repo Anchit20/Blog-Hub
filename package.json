@@ -3,7 +3,7 @@
   "scripts": {
     "start": "node api/index.js",
     "dev": "nodemon api/index.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client"
+    "build": "yarn install && yarn install --prefix client && yarn run build --prefix client"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
